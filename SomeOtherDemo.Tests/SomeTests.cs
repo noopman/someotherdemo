@@ -9,6 +9,7 @@ namespace SomeOtherDemo.Tests
 		public void SomeTest()
 		{
 			Assert.IsTrue(1 != 42);
+			Assert.IsTrue(1 != 42);
 		}
 	}
 }
