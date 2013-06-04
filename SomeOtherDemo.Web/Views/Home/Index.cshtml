@@ -3,7 +3,7 @@
 @{
 	Layout = null;
 
-	bool discloseDeploymentMethod = ViewBag.DiscloseDeploymentMethod;
+	bool hideDeploymentMethod = !ViewBag.DiscloseDeploymentMethod;
 }
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
 	</head>
 	<body>
 		<h2>
-			@if (discloseDeploymentMethod)
+			@if (hideDeploymentMethod)
 			{
 				<h2>This site is continuously delivered using some secret product.</h2>
 			}
