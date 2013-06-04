@@ -14,7 +14,17 @@
 	</head>
 	<body>
 		<h2>
-			  This site is continuously delivered using @(!discloseDeploymentMethod ? "a secret method" : "TeamCity").
+			@if (discloseDeploymentMethod)
+			{
+				<h2>This site is continuously delivered using some secret product.</h2>
+			}
+			else
+			{
+				<h2>This site is continuously delivered using TeamCity.
+					<br />
+					Read the very long blog post on how to do that here: <a target="_blank" href="http://bit.ly/tccdwaws">http://bit.ly/tccdwaws</a>!
+		 </h2>
+			}			
 		</h2>
 	</body>
 </html>
