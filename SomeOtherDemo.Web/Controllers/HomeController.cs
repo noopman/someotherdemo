@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Configuration;
+using System.Web.Mvc;
 
 namespace SomeOtherDemo.Web.Controllers
 {
@@ -6,6 +7,8 @@ namespace SomeOtherDemo.Web.Controllers
 	{
 		public ActionResult Index()
 		{
+			bool setting;
+			ViewBag.DiscloseDeploymentMethod = bool.TryParse(ConfigurationManager.AppSettings["Disclose deployment method"], out setting) && setting;
 			return View();
 		}
 	}

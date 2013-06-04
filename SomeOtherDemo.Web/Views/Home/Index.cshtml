@@ -2,17 +2,19 @@
 
 @{
 	Layout = null;
+
+	bool discloseDeploymentMethod = ViewBag.DiscloseDeploymentMethod;
 }
 
 <!DOCTYPE html>
 
 <html>
 	<head>
-		<title>title</title>
+		<title>Testing a noMicrosoft version of Continuous Delivery</title>
 	</head>
 	<body>
 		<div>
-			  My Page
+			  This site is continuously delivered using @(!discloseDeploymentMethod ? "a secret method" : "TeamCity").
 		</div>
 	</body>
 </html>
