@@ -8,7 +8,7 @@ namespace SomeOtherDemo.Tests
 		[Test]
 		public void SomeTest()
 		{
-			//Assert.IsTrue(1 == 42);
+			Assert.IsTrue(1 == 42);
 		}
 	}
 }
